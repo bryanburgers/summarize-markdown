@@ -9,11 +9,6 @@ and a simple string is far more useful. The examples that motivated this
 library are meta descriptions and the metadata in the Open Graph and Twitter
 Cards protocols.
 
-## Status
-
-This library is not operational yet. It is currently only documentation and
-tests; the actual code has not been written.
-
 ## Contributing
 
 Contributing tests, documentation, or code is all appreciated.
@@ -35,6 +30,6 @@ summarize('Test paragraph with a [link](http://google.com).');
 //=> 'Test paragraph with a link.'
 
 summarize('# Headline\n\nTest paragraph.');
-//=> 'Headline. Test paragraph.'
+//=> 'Headline: Test paragraph.'
 ```
 
