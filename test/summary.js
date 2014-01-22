@@ -59,4 +59,9 @@ describe('summarize', function() {
 	it('summarizes block quotes with a trailing paragraph', function() {
 		t('> This is a blockquote.\r\n\r\nThis is a paragraph.', '"This is a blockquote." This is a paragraph.');
 	});
+
+	it('doesn\'t make entities of quotes', function() {
+		t('It\'s complicated.', 'It\'s complicated.');
+		t('**It\'s** complicated.', 'It\'s complicated.');
+	});
 });

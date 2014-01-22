@@ -1,14 +1,17 @@
 "use strict";
 
+var ent = require('ent');
 var marked = require('marked');
 var renderer = new marked.Renderer();
 
 //code(string code, string language)
 renderer.blockquote = function(quote) {
+	quote = ent.decode(quote);
 	return '"' + quote.trim() + '" ';
 };
 //html(string html)
 renderer.heading = function(text, level) {
+	text = ent.decode(text);
 	return text + ': ';
 };
 //hr()
@@ -16,6 +19,7 @@ renderer.list = function(body, ordered) {
 	return body.trim();
 };
 renderer.listitem = function(text) {
+	text = ent.decode(text);
 	if (/\.\s*$/.test(text)) {
 		return text;
 	}
@@ -25,6 +29,7 @@ renderer.listitem = function(text) {
 	//return '\'' + text + '\'';
 };
 renderer.paragraph = function(text) {
+	text = ent.decode(text);
 	return text + ' ';
 };
 //table(string header, string body)
