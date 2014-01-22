@@ -17,7 +17,7 @@
     "url": "bryanburgers/summarize-markdown"
   },
   "dependencies": {
-    "marked": "~0.2.9"
+    "marked": "~0.3"
   },
   "devDependencies": {
     "mocha": "~1.12.1"
