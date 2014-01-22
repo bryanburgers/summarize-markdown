@@ -51,4 +51,12 @@ describe('summarize', function() {
 	it('summarizes poetry', function() {
 		t('Line 1  \r\nLine 2  \r\nLine 3', 'Line 1 / Line 2 / Line 3');
 	});
+
+	it('summarizes block quotes', function() {
+		t('> This is a blockquote.', '"This is a blockquote."');
+	});
+
+	it('summarizes block quotes with a trailing paragraph', function() {
+		t('> This is a blockquote.\r\n\r\nThis is a paragraph.', '"This is a blockquote." This is a paragraph.');
+	});
 });

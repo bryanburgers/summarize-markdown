@@ -4,7 +4,9 @@ var marked = require('marked');
 var renderer = new marked.Renderer();
 
 //code(string code, string language)
-//blockquote(string quote)
+renderer.blockquote = function(quote) {
+	return '"' + quote.trim() + '" ';
+};
 //html(string html)
 renderer.heading = function(text, level) {
 	return text + ': ';
