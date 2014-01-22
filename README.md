@@ -2,6 +2,8 @@
 
 Summarize markdown into a simple string, rather than into HTML.
 
+[![Build Status](https://travis-ci.org/bryanburgers/summarize-markdown.png?branch=master)](https://travis-ci.org/bryanburgers/summarize-markdown)
+
 ## Why?
 
 Why would anybody want to do this? There are times when HTML is not accepted,
