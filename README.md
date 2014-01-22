@@ -15,8 +15,6 @@ Contributing tests, documentation, or code is all appreciated.
 
 ## Installation
 
-Eventually, as long as nobody squats:
-
 ```
 npm install summarize-markdown
 ```
@@ -32,4 +30,3 @@ summarize('Test paragraph with a [link](http://google.com).');
 summarize('# Headline\n\nTest paragraph.');
 //=> 'Headline: Test paragraph.'
 ```
-
