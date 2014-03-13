@@ -64,4 +64,12 @@ describe('summarize', function() {
 		t('It\'s complicated.', 'It\'s complicated.');
 		t('**It\'s** complicated.', 'It\'s complicated.');
 	});
+
+	it('ignores images', function() {
+		t('First content.\r\n\r\n![Alt](/assets/images/image.png)\r\n\r\nSome other content.', 'First content. Some other content.');
+	});
+
+	it('ignores code', function() {
+		t('First content.\r\n\r\n```js\r\nvar x = 3;\r\nvar y = 4;\r\n```\r\n\r\nSome other content.', 'First content. Some other content.');
+	});
 });

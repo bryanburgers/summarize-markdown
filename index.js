@@ -4,7 +4,9 @@ var ent = require('ent');
 var marked = require('marked');
 var renderer = new marked.Renderer();
 
-//code(string code, string language)
+renderer.code = function(code, language) {
+	return '';
+};
 renderer.blockquote = function(quote) {
 	quote = ent.decode(quote);
 	return '"' + quote.trim() + '" ';
@@ -29,6 +31,9 @@ renderer.listitem = function(text) {
 	//return '\'' + text + '\'';
 };
 renderer.paragraph = function(text) {
+	if (text === '') {
+		return '';
+	}
 	text = ent.decode(text);
 	return text + ' ';
 };
@@ -50,7 +55,9 @@ renderer.br = function() {
 renderer.link = function(href, title, text) {
 	return text;
 };
-//image(string href, string title, string text)
+renderer.image = function(href, title, text) {
+	return '';
+};
 
 module.exports = function(text, options) {
 	return marked(text, {
