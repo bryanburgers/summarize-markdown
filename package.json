@@ -21,7 +21,7 @@
     "url": "bryanburgers/summarize-markdown"
   },
   "dependencies": {
-    "ent": "~0.1.0",
+    "he": "~0.4.1",
     "marked": "~0.3"
   },
   "devDependencies": {

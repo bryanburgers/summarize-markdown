@@ -69,6 +69,10 @@ describe('summarize', function() {
 		t('First content.\r\n\r\n![Alt](/assets/images/image.png)\r\n\r\nSome other content.', 'First content. Some other content.');
 	});
 
+	it('decodes HTML character references correctly', function() {
+		t('> foo &#x1D306; bar &amp; baz', '"foo \uD834\uDF06 bar & baz"');
+	});
+
 	it('ignores code', function() {
 		t('First content.\r\n\r\n```js\r\nvar x = 3;\r\nvar y = 4;\r\n```\r\n\r\nSome other content.', 'First content. Some other content.');
 	});
