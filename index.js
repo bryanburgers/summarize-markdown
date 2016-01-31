@@ -7,6 +7,9 @@ var renderer = new marked.Renderer();
 renderer.code = function(code, language) {
 	return '';
 };
+renderer.codespan = function(text) {
+  return text;
+};
 renderer.blockquote = function(quote) {
 	quote = he.decode(quote);
 	return '"' + quote.trim() + '" ';
@@ -47,7 +50,6 @@ renderer.strong = function(text) {
 renderer.em = function(text) {
 	return text;
 };
-//codespan(string code)
 renderer.br = function() {
 	return ' / ';
 };
