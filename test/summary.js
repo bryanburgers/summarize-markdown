@@ -73,7 +73,11 @@ describe('summarize', function() {
 		t('> foo &#x1D306; bar &amp; baz', '"foo \uD834\uDF06 bar & baz"');
 	});
 
-	it('ignores code', function() {
+	it('ignores code block', function() {
 		t('First content.\r\n\r\n```js\r\nvar x = 3;\r\nvar y = 4;\r\n```\r\n\r\nSome other content.', 'First content. Some other content.');
+	});
+
+	it('summarize a codespan', function() {
+		t('This is some `code`.', 'This is some code.');
 	});
 });
