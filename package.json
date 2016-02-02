@@ -1,6 +1,6 @@
 {
   "name": "summarize-markdown",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Summarize markdown into a simple text string",
   "author": {
     "name": "Bryan Burgers",
